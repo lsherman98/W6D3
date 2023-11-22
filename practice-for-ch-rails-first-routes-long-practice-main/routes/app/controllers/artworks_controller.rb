@@ -24,7 +24,7 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
 
     if @artwork.update(artwork_params)
-      redirect_to user_url(@artwork)
+      redirect_to artwork_url(@artwork)
     else
       render json: @artwork.errors.full_messages, status: :unprocessable_entity
     end
