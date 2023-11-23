@@ -18,3 +18,7 @@ artwork2 = Artwork.create({title: 'Mona Lisa', image_url: 'https://upload.wikime
 shared1 = ArtworkShare.create({artwork_id: 1, viewer_id: 3})
 shared2 = ArtworkShare.create({artwork_id: 2, viewer_id: 1})
 shared3 = ArtworkShare.create({artwork_id: 3, viewer_id: 2})
+
+comment1 = Comment.create({body: "This is a nice painting", author_id: 2, artwork_id: 1})
+comment2 = Comment.create({body: "This is a nice painting", author_id: 1, artwork_id: 3})
+comment3 = Comment.create({body: "This is a nice painting", author_id: 3, artwork_id: 2})
