@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   def index
-    @artworks = Artwork.all
+    @artworks = Artwork.artworks_for_user_id(params[:user_id])
 
     render json: @artworks
   end
@@ -29,7 +29,7 @@ class ArtworksController < ApplicationController
       render json: @artwork.errors.full_messages, status: :unprocessable_entity
     end
   end
-
+  
   def destroy
     @artwork = Artwork.find(params[:id])
     @artwork.destroy
